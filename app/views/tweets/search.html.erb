@@ -1,0 +1,12 @@
+<h1>Resultados de búsqueda para "<%= @keyword %>"</h1>
+
+<% if @tweets.empty? %>
+  <p>No se encontraron tweets que coincidan con la búsqueda.</p>
+<% else %>
+  <% @tweets.each do |tweet| %>
+    <div class="tweet">
+      <p><strong><%= tweet.user_name %></strong></p>
+      <p><%= tweet.description %></p>
+    </div>
+  <% end %>
+<% end %>
