@@ -1,0 +1,41 @@
+<nav class="navbar bg-light ">
+  <div class="container-fluid">
+
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Explorer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Notificaciones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Verified</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">More</a>
+      </li>
+      <li>
+      <%= form_tag(search_tweets_path, method: "get" ) do %>
+      <%= text_field_tag :keyword, params[:keyword], placeholder: "Buscar tweets...", class:"my-2" %>
+        <%= submit_tag "Buscar" %>
+          <% end %>
+      </li>
+      <li>
+        <%= link_to "New tweet", new_tweet_path ,class: "btn btn-primary my-3 mx-3 px-5"%>
+    </li>
+    </ul>
+    
+  </div>
+</nav>
