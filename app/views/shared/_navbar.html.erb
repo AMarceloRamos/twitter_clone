@@ -3,39 +3,40 @@
 
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link active d-inline" aria-current="page" href="/tweets"><i class="fa-solid fa-house d-inline">
+          </i>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Explorer</a>
+        <a class="nav-link d-inline" href="#"> <i class="fa-solid fa-magnifying-glass d-inline"> </i>Explorer</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Notificaciones</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-bell d-inline"> </i>Notifications</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-envelope d-inline"> </i>Messages</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">List</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-rectangle-list d-inline"> </i>List</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Verified</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-badge-check d-inline"> </i>Verified</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-user d-inline"> </i> Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">More</a>
+        <a class="nav-link d-inline" href="#"><i class="fa-regular fa-cowbell-circle-plus d-inline"></i>More</a>
       </li>
       <li>
-      <%= form_tag(search_tweets_path, method: "get" ) do %>
-      <%= text_field_tag :keyword, params[:keyword], placeholder: "Buscar tweets...", class:"my-2" %>
-        <%= submit_tag "Buscar" %>
-          <% end %>
+        <%= form_tag(search_tweets_path, method: "get" ) do %>
+          <%= text_field_tag :keyword, params[:keyword], placeholder: "Buscar tweets..." , class:"my-2" %>
+            <%= submit_tag "Buscar" %>
+              <% end %>
       </li>
       <li>
-        <%= link_to "New tweet", new_tweet_path ,class: "btn btn-primary my-3 mx-3 px-5"%>
-    </li>
+        <%= link_to "New tweet" , new_tweet_path ,class: "btn btn-primary my-3 mx-3 px-5" %>
+      </li>
     </ul>
-    
+
   </div>
 </nav>
